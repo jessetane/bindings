@@ -81,6 +81,7 @@ native.client.group.onError(clientGroup, (webSocket) => {
             message: 'uWs client connection error',
             stack: 'uWs client connection error'
         });
+        webSocket.internalOnClose(1006, 'uWs client connection error');
     });
 });
 
